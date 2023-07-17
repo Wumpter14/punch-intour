@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script async src="https://arc.io/widget.min.js#r4vyF7cb"></script>
+    <script async src="https://arc.io/widget.min.js#8KZWhjRG"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Punch Intour</title>
@@ -18,21 +18,30 @@
 <br>
 <br>
 <div class="boosts">
-    <br>
-    <h3>Auto-Punch</h3>
-    <p>Every second, you get an automatic punch.</p>
-    0 Punches
-    <br>
+  <br>
+  <h3>Auto-Punch</h3>
+  <p>Every 1 second, you automatically get a punch.</p>
+  0 Punches
+  <br>
 </div>
 <br>
 <br>
-<br>
+<div class="boosts">
+    <br>
+    <h3>Double Punch!</h3>
+    <p>Every button press deals 2 punches!</p>
+    <span id="punch_count">100 Punches</span>
+    <br>
+    </div>
+    <br>
+    <br>
 <div class="boosts">
   <br>
-  <h3>Double Punch!</h3>
-  <p>Every button press deals 2 punches!</p>
-  <span id="punch_count">100 Punches</span>
+  <h3>Auto-Punch <element class="x2">x2</element></h3>
+  <p>Every 0.5 seconds, you automatically get a punch.</p>
+  500 Punches
   <br>
+</div>
 </div>
 </center>
 <script>
@@ -57,6 +66,10 @@ function incrementCounter() {
 }
 
 interval = setInterval(incrementCounter, 1000);
+
+if (count >= 500) {
+  interval = setInterval(incrementCounter, 500);
+}
 </script>
 </body>
 </html>
