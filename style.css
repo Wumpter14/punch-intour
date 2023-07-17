@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+.play {
+    border-radius: 10px;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+  #counter {
+    font-size: larger;
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    margin: 40px;
+    text-align: center;
+  }
+  
+.boosts {
+  width: 450px;
+  height: 175px;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
+
+  #increment {
+    width: 150px;
+    font-family: 'Press Start 2P', cursive;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: crosshair;
+    user-select: 12px;
+  }
+  
+  #increment:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  

@@ -1,0 +1,62 @@
+<html>
+<head>
+    <script async src="https://arc.io/widget.min.js#8KZWhjRG"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punch Intour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <center>
+        <div id="counter">0</div>
+        <br>
+<button id="increment" onclick="increment()">Punch</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="boosts">
+    <br>
+    <h3>Auto-Punch</h3>
+    <p>Every second, you get an automatic punch.</p>
+    0 Punches
+    <br>
+</div>
+<br>
+<br>
+<br>
+<div class="boosts">
+  <br>
+  <h3>Double Punch!</h3>
+  <p>Every button press deals 2 punches!</p>
+  <span id="punch_count">100 Punches</span>
+  <br>
+</div>
+</center>
+<script>
+let count = 0;
+const incrementButton = document.getElementById("increment");
+incrementButton.addEventListener("click", () => {
+  if (count < 100) {
+    count++;
+  } else {
+    count += 2;
+    document.getElementById("punch_count").innerText = "Activated";
+  }
+  document.getElementById("counter").innerText = count;
+  return false;
+});
+
+let interval;
+
+function incrementCounter() {
+  count++;
+  document.getElementById("counter").innerText = count;
+}
+
+interval = setInterval(incrementCounter, 1000);
+</script>
+</body>
+</html>
