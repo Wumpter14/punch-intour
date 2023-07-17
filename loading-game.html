@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Punch Intour</title>
+</head>
+<body>
+    <center>
+<h1>Loading...</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="game"></div>
+<script>
+var game = document.getElementById("game");
+var score = 0;
+
+function addScore() {
+  score++;
+  document.getElementById("score").innerHTML = score;
+}
+
+function startGame() {
+  var ball = document.createElement("div");
+  ball.classList.add("ball");
+  game.appendChild(ball);
+
+  var interval = setInterval(function() {
+    ball.style.left += 10;
+
+    if (ball.offsetLeft > game.offsetWidth) {
+      ball.style.left = 0;
+    }
+  }, 100);
+
+  document.addEventListener("click", function() {
+    score++;
+    document.getElementById("score").innerHTML = score;
+  });
+}
+
+startGame();
+</script>
+</center>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    padding: 250px;
+  }
+</style>
+<script>
+setTimeout(function() {
+  window.location.href = "game.html";
+}, 3000);
+</script>
+</body>
+</html>
